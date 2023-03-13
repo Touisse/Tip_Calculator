@@ -86,6 +86,9 @@ const Button = styled.button`
   &:hover {
     background-color: hsl(172, 67%, 45%);
   }
+  &.active {
+    background-color: hsl(172, 67%, 45%);
+  }
 `;
 const ButtonInput = styled.input`
   background-color: hsl(185, 41%, 84%);
@@ -132,10 +135,12 @@ const FormSection = ({ data, setData }) => {
         <ButtonsContainer>
           {percentiles.map((percentage) => (
             <Button
+              className={data.activeButton === percentage ? "active" : ""}
               type="button"
               key={percentage}
               onClick={(e) => {
                 setData({ ...data, tip: percentage });
+                setData({ ...data, activeButton: percentage });
               }}
             >
               {percentage}%

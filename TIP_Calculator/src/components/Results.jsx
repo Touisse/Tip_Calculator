@@ -58,6 +58,7 @@ const Results = ({ data, setData }) => {
       bill: "0",
       people: "1",
       tip: "0",
+      activeButton: "0",
     });
   };
 

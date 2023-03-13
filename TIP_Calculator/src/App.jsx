@@ -78,6 +78,7 @@ function App() {
     bill: "0",
     people: "1",
     tip: "0",
+    activeButton: "0",
   });
 
   return (
