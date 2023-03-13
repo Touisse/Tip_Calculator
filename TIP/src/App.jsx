@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import FormSection from "./components/Form";
 import Results from "./components/Results";
 
 const Section = styled.div`
@@ -31,6 +32,22 @@ const Title = styled.img`
 `;
 const Left = styled.div`
   flex: 1;
+  background-color: hsl(183, 100%, 15%);
+  height: 90%;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  color: white;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+  @media screen and (max-width: 768px) {
+    width: 90%;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+  }
 `;
 const Right = styled.div`
   flex: 1;
@@ -56,7 +73,9 @@ function App() {
     <Section>
       <Title src="../images/logo.svg" alt="title" />
       <Container>
-        <Left>left</Left>
+        <Left>
+          <FormSection />
+        </Left>
         <Right>
           <Results />
         </Right>
